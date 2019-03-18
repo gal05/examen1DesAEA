@@ -33,5 +33,17 @@ namespace Evaluacion
             FrmClientesPorPais porPais = new FrmClientesPorPais();
             porPais.Show();
         }
+
+        private void lISTADEPEDIDOSYDETALLESToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmPedidos mastop = new FrmPedidos();
+            mastop.Show();
+        }
+
+        private void lISTADEPRODUCTOSToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FrmProductos productos = new FrmProductos();
+            productos.Show();
+        }
     }
 }

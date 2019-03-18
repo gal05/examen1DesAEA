@@ -51,6 +51,7 @@
             this.txtProducto.Name = "txtProducto";
             this.txtProducto.Size = new System.Drawing.Size(231, 20);
             this.txtProducto.TabIndex = 12;
+            this.txtProducto.TextChanged += new System.EventHandler(this.txtProducto_TextChanged);
             // 
             // Label2
             // 

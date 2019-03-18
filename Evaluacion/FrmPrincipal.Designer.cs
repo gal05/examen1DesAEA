@@ -98,12 +98,14 @@
             this.lISTADEPRODUCTOSToolStripMenuItem1.Name = "lISTADEPRODUCTOSToolStripMenuItem1";
             this.lISTADEPRODUCTOSToolStripMenuItem1.Size = new System.Drawing.Size(254, 22);
             this.lISTADEPRODUCTOSToolStripMenuItem1.Text = "LISTA DE PRODUCTOS";
+            this.lISTADEPRODUCTOSToolStripMenuItem1.Click += new System.EventHandler(this.lISTADEPRODUCTOSToolStripMenuItem1_Click);
             // 
             // lISTADEPEDIDOSYDETALLESToolStripMenuItem
             // 
             this.lISTADEPEDIDOSYDETALLESToolStripMenuItem.Name = "lISTADEPEDIDOSYDETALLESToolStripMenuItem";
             this.lISTADEPEDIDOSYDETALLESToolStripMenuItem.Size = new System.Drawing.Size(254, 22);
             this.lISTADEPEDIDOSYDETALLESToolStripMenuItem.Text = "EMPLEADOS TOP";
+            this.lISTADEPEDIDOSYDETALLESToolStripMenuItem.Click += new System.EventHandler(this.lISTADEPEDIDOSYDETALLESToolStripMenuItem_Click);
             // 
             // rEPORTESToolStripMenuItem
             // 
