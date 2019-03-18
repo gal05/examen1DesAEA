@@ -56,7 +56,7 @@
             this.GroupBox1.Controls.Add(this.Label1);
             this.GroupBox1.Location = new System.Drawing.Point(12, 15);
             this.GroupBox1.Name = "GroupBox1";
-            this.GroupBox1.Size = new System.Drawing.Size(384, 111);
+            this.GroupBox1.Size = new System.Drawing.Size(507, 111);
             this.GroupBox1.TabIndex = 4;
             this.GroupBox1.TabStop = false;
             this.GroupBox1.Text = "Consulta Por";
@@ -70,11 +70,13 @@
             this.chkTodo.TabIndex = 8;
             this.chkTodo.Text = "Mostrar Todos";
             this.chkTodo.UseVisualStyleBackColor = true;
+            this.chkTodo.CheckedChanged += new System.EventHandler(this.chkTodo_CheckedChanged);
             // 
             // dtpFecha2
             // 
-            this.dtpFecha2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFecha2.Location = new System.Drawing.Point(262, 57);
+            this.dtpFecha2.CustomFormat = "yyyy";
+            this.dtpFecha2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpFecha2.Location = new System.Drawing.Point(332, 60);
             this.dtpFecha2.Name = "dtpFecha2";
             this.dtpFecha2.Size = new System.Drawing.Size(111, 20);
             this.dtpFecha2.TabIndex = 7;
@@ -83,16 +85,17 @@
             // Label4
             // 
             this.Label4.AutoSize = true;
-            this.Label4.Location = new System.Drawing.Point(205, 58);
+            this.Label4.Location = new System.Drawing.Point(251, 64);
             this.Label4.Name = "Label4";
-            this.Label4.Size = new System.Drawing.Size(54, 13);
+            this.Label4.Size = new System.Drawing.Size(59, 13);
             this.Label4.TabIndex = 6;
-            this.Label4.Text = "Fecha fin.";
+            this.Label4.Text = "Fecha final";
             // 
             // dtpFecha1
             // 
-            this.dtpFecha1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFecha1.Location = new System.Drawing.Point(262, 20);
+            this.dtpFecha1.CustomFormat = "yyyy";
+            this.dtpFecha1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpFecha1.Location = new System.Drawing.Point(332, 22);
             this.dtpFecha1.Name = "dtpFecha1";
             this.dtpFecha1.Size = new System.Drawing.Size(111, 20);
             this.dtpFecha1.TabIndex = 5;
@@ -101,11 +104,11 @@
             // Label3
             // 
             this.Label3.AutoSize = true;
-            this.Label3.Location = new System.Drawing.Point(204, 22);
+            this.Label3.Location = new System.Drawing.Point(250, 28);
             this.Label3.Name = "Label3";
-            this.Label3.Size = new System.Drawing.Size(53, 13);
+            this.Label3.Size = new System.Drawing.Size(54, 13);
             this.Label3.TabIndex = 4;
-            this.Label3.Text = "Fecha ini.";
+            this.Label3.Text = "Fecha inc";
             // 
             // cboCliente
             // 
@@ -131,6 +134,7 @@
             this.cboEmpleado.Name = "cboEmpleado";
             this.cboEmpleado.Size = new System.Drawing.Size(137, 21);
             this.cboEmpleado.TabIndex = 1;
+            this.cboEmpleado.SelectionChangeCommitted += new System.EventHandler(this.cboEmpleado_SelectionChangeCommitted);
             // 
             // Label1
             // 
@@ -150,18 +154,19 @@
             this.dgdPedido.Location = new System.Drawing.Point(12, 133);
             this.dgdPedido.Name = "dgdPedido";
             this.dgdPedido.ReadOnly = true;
-            this.dgdPedido.Size = new System.Drawing.Size(384, 183);
+            this.dgdPedido.Size = new System.Drawing.Size(801, 248);
             this.dgdPedido.TabIndex = 5;
             // 
             // FrmListaRapida
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(413, 349);
+            this.ClientSize = new System.Drawing.Size(852, 466);
             this.Controls.Add(this.GroupBox1);
             this.Controls.Add(this.dgdPedido);
             this.Name = "FrmListaRapida";
             this.Text = "FrmListaRapida";
+            this.Load += new System.EventHandler(this.FrmListaRapida_Load);
             this.GroupBox1.ResumeLayout(false);
             this.GroupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgdPedido)).EndInit();
