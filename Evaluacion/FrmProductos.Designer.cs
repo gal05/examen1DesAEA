@@ -41,7 +41,7 @@
             this.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProductos.Location = new System.Drawing.Point(25, 84);
             this.dgvProductos.Name = "dgvProductos";
-            this.dgvProductos.Size = new System.Drawing.Size(626, 258);
+            this.dgvProductos.Size = new System.Drawing.Size(775, 248);
             this.dgvProductos.TabIndex = 13;
             // 
             // txtProducto
@@ -77,7 +77,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(672, 365);
+            this.ClientSize = new System.Drawing.Size(933, 519);
             this.Controls.Add(this.dgvProductos);
             this.Controls.Add(this.txtProducto);
             this.Controls.Add(this.Label2);

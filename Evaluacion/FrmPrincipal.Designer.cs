@@ -92,6 +92,7 @@
             this.lISTADEPROVEEDORESToolStripMenuItem.Name = "lISTADEPROVEEDORESToolStripMenuItem";
             this.lISTADEPROVEEDORESToolStripMenuItem.Size = new System.Drawing.Size(254, 22);
             this.lISTADEPROVEEDORESToolStripMenuItem.Text = "LISTA DE PROVEEDORES";
+            this.lISTADEPROVEEDORESToolStripMenuItem.Click += new System.EventHandler(this.lISTADEPROVEEDORESToolStripMenuItem_Click);
             // 
             // lISTADEPRODUCTOSToolStripMenuItem1
             // 

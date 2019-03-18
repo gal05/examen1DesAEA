@@ -45,5 +45,11 @@ namespace Evaluacion
             FrmProductos productos = new FrmProductos();
             productos.Show();
         }
+
+        private void lISTADEPROVEEDORESToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmProveedores proveedores = new FrmProveedores();
+            proveedores.Show();
+        }
     }
 }

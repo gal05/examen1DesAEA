@@ -46,7 +46,7 @@
             this.lvwProveedor.GridLines = true;
             this.lvwProveedor.Location = new System.Drawing.Point(12, 12);
             this.lvwProveedor.Name = "lvwProveedor";
-            this.lvwProveedor.Size = new System.Drawing.Size(328, 241);
+            this.lvwProveedor.Size = new System.Drawing.Size(421, 322);
             this.lvwProveedor.TabIndex = 8;
             this.lvwProveedor.UseCompatibleStateImageBehavior = false;
             this.lvwProveedor.View = System.Windows.Forms.View.Details;
@@ -67,7 +67,7 @@
             // 
             // btnCerrar
             // 
-            this.btnCerrar.Location = new System.Drawing.Point(265, 259);
+            this.btnCerrar.Location = new System.Drawing.Point(277, 340);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(75, 23);
             this.btnCerrar.TabIndex = 11;
@@ -77,7 +77,7 @@
             // lblTotal
             // 
             this.lblTotal.AutoSize = true;
-            this.lblTotal.Location = new System.Drawing.Point(136, 260);
+            this.lblTotal.Location = new System.Drawing.Point(148, 341);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(13, 13);
             this.lblTotal.TabIndex = 10;
@@ -86,7 +86,7 @@
             // Label1
             // 
             this.Label1.AutoSize = true;
-            this.Label1.Location = new System.Drawing.Point(21, 260);
+            this.Label1.Location = new System.Drawing.Point(33, 341);
             this.Label1.Name = "Label1";
             this.Label1.Size = new System.Drawing.Size(109, 13);
             this.Label1.TabIndex = 9;
@@ -96,13 +96,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(372, 296);
+            this.ClientSize = new System.Drawing.Size(721, 399);
             this.Controls.Add(this.lvwProveedor);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.lblTotal);
             this.Controls.Add(this.Label1);
             this.Name = "FrmProveedores";
             this.Text = "FrmProveedores";
+            this.Load += new System.EventHandler(this.FrmProveedores_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
