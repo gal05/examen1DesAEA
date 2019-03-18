@@ -21,5 +21,17 @@ namespace Evaluacion
         {
 
         }
+
+        private void FrmPrincipal_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lISTADECLIENTESPORPAISToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmClientesPorPais porPais = new FrmClientesPorPais();
+            porPais.Show();
+            this.Close();
+        }
     }
 }

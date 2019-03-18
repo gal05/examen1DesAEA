@@ -41,8 +41,8 @@ namespace Evaluacion
             {
                 //MessageBox.Show(usuario + "\n" + contrasenia + "\n" + time);
                 refresTimeInDataBase(usuario);
-                FrmClientesPorPais cientesPorPais = new FrmClientesPorPais();
-                cientesPorPais.Show();
+                FrmPrincipal principal = new FrmPrincipal();
+                principal.Show();
                 this.Dispose(false);
             }
             else

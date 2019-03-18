@@ -85,6 +85,7 @@
             this.lISTADECLIENTESPORPAISToolStripMenuItem.Name = "lISTADECLIENTESPORPAISToolStripMenuItem";
             this.lISTADECLIENTESPORPAISToolStripMenuItem.Size = new System.Drawing.Size(254, 22);
             this.lISTADECLIENTESPORPAISToolStripMenuItem.Text = "LISTA DE CLIENTES POR PAIS";
+            this.lISTADECLIENTESPORPAISToolStripMenuItem.Click += new System.EventHandler(this.lISTADECLIENTESPORPAISToolStripMenuItem_Click);
             // 
             // lISTADEPROVEEDORESToolStripMenuItem
             // 
@@ -129,6 +130,7 @@
             this.Name = "FrmPrincipal";
             this.Text = "FrmPrincipal";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.FrmPrincipal_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
