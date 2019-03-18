@@ -39,8 +39,11 @@ namespace Evaluacion
 
             if (VerificacionUsuario(usuario, contrasenia) == true)
             {
-                MessageBox.Show(usuario + "\n" + contrasenia + "\n" + time);
+                //MessageBox.Show(usuario + "\n" + contrasenia + "\n" + time);
                 refresTimeInDataBase(usuario);
+                FrmClientesPorPais cientesPorPais = new FrmClientesPorPais();
+                cientesPorPais.Show();
+                this.Dispose(false);
             }
             else
             {
@@ -74,6 +77,11 @@ namespace Evaluacion
             sqlcommand.Connection.Open();
             sqlcommand.Parameters.AddWithValue("@usuario", nombre);
             SqlDataReader sqlDataReader = sqlcommand.ExecuteReader(CommandBehavior.CloseConnection);
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.Application.Exit();
         }
 
 
