@@ -47,13 +47,13 @@ namespace Evaluacion
 
         private void cbxAnio_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            using (SqlCommand sqlCommand = new SqlCommand("examen1_guerra_lista_clientes_anio", Conexion.conexion()))
+            using (SqlCommand sqlCommand = new SqlCommand("examen1_guerra_lista_clientes_pais", Conexion.conexion()))
             {
                 using (SqlDataAdapter adapter = new SqlDataAdapter())
                 {
                     adapter.SelectCommand = sqlCommand;
                     adapter.SelectCommand.CommandType = CommandType.StoredProcedure;
-                    adapter.SelectCommand.Parameters.AddWithValue("@anio", cbxAnio.SelectedValue);
+                    adapter.SelectCommand.Parameters.AddWithValue("@pais", cbxAnio.SelectedValue);
                     using (DataSet dataset = new DataSet())
                     {
                         adapter.Fill(dataset, "Pedidos");
@@ -67,6 +67,27 @@ namespace Evaluacion
         private void cbxAnio_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void dataGridView1_DoubleClick(object sender, EventArgs e)
+        {
+            String idCliente;
+            idCliente = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            using (SqlCommand sqlcomand = new SqlCommand("examen1_guerra_detalles_cliente", Conexion.conexion()))
+            {
+                using (SqlDataAdapter adapter = new SqlDataAdapter())
+                {
+                    adapter.SelectCommand = sqlcomand;
+                    adapter.SelectCommand.CommandType = CommandType.StoredProcedure;
+                    adapter.SelectCommand.Parameters.AddWithValue("@idCliente", idCliente);
+                    using (DataSet dataset = new DataSet())
+                    {
+                        adapter.Fill(dataset, "Detalles");
+                        dataGridView2.DataSource = dataset.Tables["Detalles"];
+                        txbNPedidos.Text = dataset.Tables[0].Rows.Count.ToString();
+                    }
+                }
+            }
         }
     }
 }
