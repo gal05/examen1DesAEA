@@ -42,7 +42,7 @@ namespace Evaluacion
             }
             else
             {
-                MessageBox.Show("salio mal pe causita");
+                MessageBox.Show("Error de validacion");
             }
 
             
@@ -51,8 +51,6 @@ namespace Evaluacion
         public Boolean VerificacionUsuario(String  nombre ,String pass)
         {
             SqlCommand sqlcommand = new SqlCommand("CheckPassword");
-
-            
             sqlcommand.CommandType = CommandType.StoredProcedure;
             sqlcommand.Connection = Conexion.conexion();
             sqlcommand.Connection.Open();
