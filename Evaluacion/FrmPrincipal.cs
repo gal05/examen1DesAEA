@@ -19,7 +19,8 @@ namespace Evaluacion
 
         private void lISTADEPRODUCTOSToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            FrmListaRapida listaRapida = new FrmListaRapida();
+            listaRapida.Show();
         }
 
         private void FrmPrincipal_Load(object sender, EventArgs e)
@@ -31,7 +32,6 @@ namespace Evaluacion
         {
             FrmClientesPorPais porPais = new FrmClientesPorPais();
             porPais.Show();
-            this.Close();
         }
     }
 }
