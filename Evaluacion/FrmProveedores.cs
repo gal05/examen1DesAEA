@@ -29,7 +29,7 @@ namespace Evaluacion
         {
             SqlDataAdapter adapter = new SqlDataAdapter("examen1_guerra_proveedores", Conexion.conexion());
             adapter.SelectCommand.CommandType = CommandType.StoredProcedure;
-            adapter.Fill(lvwProveedor);
+           // adapter.Fill(lvwProveedor);
         }
     }
 }
