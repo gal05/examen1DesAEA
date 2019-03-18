@@ -39,6 +39,7 @@ namespace Evaluacion
             if (VerificacionUsuario(usuario, contrasenia) == true)
             {
                 MessageBox.Show(usuario + "\n" + contrasenia + "\n" + time);
+                refresTimeInDataBase(usuario);
             }
             else
             {
@@ -64,6 +65,17 @@ namespace Evaluacion
             else{ return false; }
 
         }
+        public void refresTimeInDataBase(String nombre)
+        {
+            SqlCommand sqlcommand = new SqlCommand("examen1_editFecha");
+            sqlcommand.CommandType = CommandType.StoredProcedure;
+            sqlcommand.Connection = Conexion.conexion();
+            sqlcommand.Connection.Open();
+            sqlcommand.Parameters.AddWithValue("@usuario", nombre);
+            SqlDataReader sqlDataReader = sqlcommand.ExecuteReader(CommandBehavior.CloseConnection);
+        }
+
+
 
         /* GEGE  funciona!! hay conexion
         public void ListaAnios()
