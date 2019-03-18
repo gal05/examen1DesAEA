@@ -22,7 +22,7 @@ namespace Evaluacion
         private void FrmIngreso_Load(object sender, EventArgs e)
         {
             timer1.Enabled = true;
-            ListaAnios();//:v
+            //ListaAnios();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -30,10 +30,44 @@ namespace Evaluacion
             label3.Text = DateTime.Now.ToLongTimeString();
         }
 
+        private void btnIngresar_Click(object sender, EventArgs e)
+        {
+            string usuario= textBox1.Text;
+            string contrasenia = textBox2.Text;
+            string time = DateTime.Now.ToString();
 
+            if (VerificacionUsuario(usuario, contrasenia) == true)
+            {
+                MessageBox.Show(usuario + "\n" + contrasenia + "\n" + time);
+            }
+            else
+            {
+                MessageBox.Show("salio mal pe causita");
+            }
 
+            
+        }
 
-        //GEGE
+        public Boolean VerificacionUsuario(String  nombre ,String pass)
+        {
+            SqlCommand sqlcommand = new SqlCommand("CheckPassword");
+
+            
+            sqlcommand.CommandType = CommandType.StoredProcedure;
+            sqlcommand.Connection = Conexion.conexion();
+            sqlcommand.Connection.Open();
+            sqlcommand.Parameters.AddWithValue("@username", nombre);
+            sqlcommand.Parameters.AddWithValue("@password", pass);
+            SqlDataReader sqlDataReader = sqlcommand.ExecuteReader();
+            if (sqlDataReader.HasRows == true)
+            {
+                return true;
+            }
+            else{ return false; }
+
+        }
+
+        /* GEGE  funciona!! hay conexion
         public void ListaAnios()
         {
             using (SqlCommand cmd = new SqlCommand("Usp_listaAnios", Conexion.conexion()))
@@ -51,7 +85,6 @@ namespace Evaluacion
                     }
                 }
             }
-        }
-        //GEGE :D
+        }*/
     }
 }
