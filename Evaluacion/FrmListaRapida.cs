@@ -114,6 +114,28 @@ namespace Evaluacion
 
 
         }
+
+        private void cboCliente_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            using (SqlCommand sqlCommand = new SqlCommand("examen1_guerra_pedidos_x_cliente", Conexion.conexion()))
+            {
+                using (SqlDataAdapter adapter = new SqlDataAdapter())
+                {
+                    adapter.SelectCommand = sqlCommand;
+                    adapter.SelectCommand.CommandType = CommandType.StoredProcedure;
+                    adapter.SelectCommand.Parameters.AddWithValue("@nombreCli", cboCliente.SelectedValue);
+                    adapter.SelectCommand.Parameters.AddWithValue("@fechaIn", dtpFecha1.Value.ToString("yyyy"));
+                    adapter.SelectCommand.Parameters.AddWithValue("@fechaFin", dtpFecha2.Value.ToString("yyyy"));
+                    using (DataSet dataset = new DataSet())
+                    {
+                        adapter.Fill(dataset, "Pedidos");
+                        dgdPedido.DataSource = dataset.Tables["Pedidos"];
+                        dgdPedido.Text = dataset.Tables["Pedidos"].Rows.Count.ToString();
+                    }
+                }
+            }
+
+        }
     }
 
 }

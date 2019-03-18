@@ -117,6 +117,7 @@
             this.cboCliente.Name = "cboCliente";
             this.cboCliente.Size = new System.Drawing.Size(137, 21);
             this.cboCliente.TabIndex = 3;
+            this.cboCliente.SelectionChangeCommitted += new System.EventHandler(this.cboCliente_SelectionChangeCommitted);
             // 
             // Label2
             // 
