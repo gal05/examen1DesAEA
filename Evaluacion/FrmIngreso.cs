@@ -28,6 +28,7 @@ namespace Evaluacion
         private void timer1_Tick(object sender, EventArgs e)
         {
             label3.Text = DateTime.Now.ToLongTimeString();
+            textBox2.UseSystemPasswordChar = true;
         }
 
         private void btnIngresar_Click(object sender, EventArgs e)
